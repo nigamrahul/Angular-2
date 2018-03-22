@@ -1,0 +1,16 @@
+{
+    "Title":"翻譯功能的角度",
+    "headTxt":"引導教程",
+    "mainTxt":"引導是用於在Web上開發響應式，移動優先項目的最流行的HTML，CSS和JS框架。",
+    "subTxt":"這是一些文字。",
+    "subTxt1":"這是另一個文本",
+    "Languages":{
+        "English":"英語",
+        "Hindi":"印地語",
+        "Chinese":"中文",
+        "French":"法國",
+        "Telugu":"泰盧固語"
+    },
+    "dropDownTitle":"選擇語言"
+
+}

@@ -1,0 +1,5 @@
+<h2 class="text-primary">Parent Component</h2>
+<p>Parent Value : {{ value }} </p>
+<p>Value coming from Child : {{ childdata }}</p>
+<app-child [value1]="value" (out)="searchEnterpriseData($event)"></app-child>
+<!-- <app-child [value1]="value"></app-child> -->

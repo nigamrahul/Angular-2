@@ -1,0 +1,15 @@
+{
+    "Title":"Traduire Feature of Angular",
+    "headTxt":"Bootstrap Tutoriel",
+    "mainTxt":"Bootstrap est le framework HTML, CSS et JS le plus populaire pour le développement d'applications mobiles et réactives",
+    "subTxt":"Ceci est du texte.",
+    "subTxt1":"Ceci est un autre texte",
+    "Languages":{
+        "English":"Anglais",
+        "Hindi":"hindi",
+        "Chinese":"chinois",
+        "French":"français",
+        "Telugu":"Tente"
+    },
+    "dropDownTitle":"Choisir la langue"
+}
