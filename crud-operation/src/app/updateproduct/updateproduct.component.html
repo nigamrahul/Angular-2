@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Update Product</h2>
+  <form #updateProductDetails="ngForm" (ngSubmit)="updateProduct(updateProductDetails.value)">
+    <div class="form-group">
+      <label for="Product Name">Item Name:</label>
+      <input type="text" class="form-control" #productName="ngModel" [(ngModel)]="data.name" placeholder="Enter item name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="Pro-color">Color:</label>
+      <input type="text" class="form-control" #color="ngModel" [(ngModel)]="data.color" placeholder="Enter item color details"
+        name="color">
+    </div>
+    <button type="submit" class="btn btn-default">Update Product</button>
+  </form>
+  <p *ngIf="!exist">Product Does Not Exist !</p>
+</div>
