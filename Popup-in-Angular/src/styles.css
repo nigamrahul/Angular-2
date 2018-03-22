@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css';
+
+/* This is by Using Toasty CSS Style*/
+@import '../node_modules/ng2-toasty/style-bootstrap.css';
+
+/* This is by Using Toastr CSS Style*/
+/* @import '../node_modules/ng2-toastr/ng2-toastr.css'; */
+body {
+    background-image: url(".\assets\1.jpeg");
+    background-repeat:no-repeat;
+    background-size: cover;
+ }

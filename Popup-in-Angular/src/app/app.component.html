@@ -1,0 +1,44 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+    <div class="jumbotron stylePattern">
+        <h2 class=" text-center text-primary">Item's List</h2>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <form class="form-inline text-center">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="text" name="itemname" [(ngModel)]="newItems">
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="pushItems()">Add</button>
+            </form>
+        </div>
+        <div class="panel-body">
+            <ul *ngFor="let i of items let ind = index">
+                <li class="well well-sm text-center">{{ i }}
+                    <span (click)="removeItems(ind,i)" data-toggle="modal" data-target="#myModal">x</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<ng2-toasty [position]="'top-right'"></ng2-toasty>
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Delete Modal</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure to delete <b> {{ deletedItem }} </b></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" name="ok" class="btn btn-success" (click)="clickModalOk($event)" data-dismiss="modal" id="ok">Yes</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" id="cancel">No</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+ul {
+    list-style-type: none;
+  }
+span{
+    cursor: pointer;
+    position: relative;
+    float: right;
+} 
+.stylePattern{
+    margin: 10px;
+} 
