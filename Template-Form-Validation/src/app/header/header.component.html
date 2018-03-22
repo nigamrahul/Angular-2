@@ -1,0 +1,20 @@
+<h2 class="text-center text-primary">Dummy Website</h2>
+<div class="container">
+  <nav class="navbar navbar-default" *ngIf="hideHeader1">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" [routerLink]="'home'">Sample</a>
+      </div>
+      <ul class="nav navbar-nav" *ngFor="let i of navbarItem ; let j = index">
+        <li>
+          <a [routerLink]="navrbarPaths[j]" [routerLinkActive]="['active']">{{ i.title }}</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a [routerLink]="'logout'" (click)="hideHeader()"> Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,34 @@
+<!-- <app-header></app-header> -->
+<div class="container">
+  <h1>User Login</h1>
+  <p class="text-primary text-right"><a (click)="NavigateToRegisteration()">Register</a></p>
+  <form role="form" #userLoginForm="ngForm" (ngSubmit)="Login(userLoginForm.value)">
+      <div class="form-group">
+        <label for="">Email:</label>
+        <input type="email" name="email" #email="ngModel" [(ngModel)]="userLoginForm.Email" class="form-control input-sm" placeholder="Email Address"
+          pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+          <div *ngIf="email.errors.pattern">
+            Invalid Mail
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="">Password:</label>
+        <input type="password" name="pass" #pass="ngModel" [(ngModel)]="userLoginForm.Password" class="form-control input-sm" placeholder="Password"
+          required minlength="8">
+        <div *ngIf="pass.invalid && (pass.dirty || pass.touched)" class="text-danger">
+          <div *ngIf="pass.errors.required">
+            Password is required.
+          </div>
+          <div *ngIf="pass.errors.minlength">
+            Password must be at least 8 characters long.
+          </div>
+        </div>
+      </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!userLoginForm.valid">Login</button>
+  </form>
+  </div>
+  <!-- <popup>
+      Wrong password please try again 
+  </popup> -->
