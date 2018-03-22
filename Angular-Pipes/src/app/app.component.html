@@ -1,0 +1,95 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="text-center">
+  <h1> Welcome to {{ title | uppercase }}!  </h1>
+   <h3> Welcome to {{ title | lowercase }}! </h3> 
+
+  <p>Today Date is {{ date }} </p>
+  <p>Today Date is {{ date | date }} </p>
+  <p>{{ date | date:'fullDate'}}</p>
+  <p>{{ date | date:'short'}}</p>
+  <p>{{ date | date:'shortDate'}}</p>
+  <p>{{ date | date:'fullDate' | uppercase}}</p> <!-- Pipe Chaning-->
+  <p> {{ arr | sort:'descending' }} </p> <!-- Custom -->
+</div>
+
+  <hr/>
+  <div class="container">
+    <h2 class="text-center">About Model Driven Form in Angular</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+      <div class="form-group">
+        <label for="firstname">First Name:</label>
+        <input type="text" class="form-control" id="firstname" placeholder="Enter First Name" name="firstname" formControlName="firstname">
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last Name:</label>
+        <input type="text" class="form-control" id="lastname" placeholder="Enter Last Name" name="lastname" formControlName="lastname">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email" formControlName="email">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+
+  <hr/>
+  <div class="container">
+    <h2 class="text-center">Simple Model Driven Form in Angular</h2>
+    <form [formGroup]="numberconvertorform">
+      <div class="form-group">
+        <label for="decimalnumber">Decimal Number:</label>
+        <input type="text" class="form-control" id="decimal" placeholder="Enter Decimal Number" 
+        name="decimal" formControlName="decimal"
+        (ngModelChange)="decimalChanged(oldValue,newValue = $event)">
+      </div>
+      <div class="form-group">
+        <label for="binarynumber">Binary Number:</label>
+        <input type="text" class="form-control" placeholder="Enter Binary Number" 
+        name="binary" formControlName="binary"
+        (ngModelChange)="binaryChanged(oldValue,newValue = $event)">
+      </div>
+      <div class="form-group">
+        <label for="octalnumber">Octal Number:</label>
+        <input type="text" class="form-control" id="octal" placeholder="Enter Octal Number"
+         name="octal" formControlName="octal"
+         (ngModelChange)="octalChanged(oldValue,newValue = $event)">
+      </div>
+      <div class="form-group">
+        <label for="hexadecimalnumber">Hexa-Decimal Number:</label>
+        <input type="text" class="form-control" id="hexadecimal" placeholder="Enter Hexa-Decimal Number"
+         name="hexadecimal" formControlName="hexadecimal"
+         (ngModelChange)="hexaDecimalChanged(oldValue,newValue = $event)">
+      </div>
+    </form>
+    
+    <hr/>
+    <p class="text-danger">Welcome to Services of Angular</p>
+    <app-product></app-product>
+
+    <hr/>
+    <!-- <ul *ngFor="let studentDetails of details">
+      <li>{{studentDetails.id}}</li>
+      <li>{{studentDetails.name}}</li>
+      <li>{{studentDetails.roll}}</li>
+    </ul> -->
+
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Roll Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let detail of details let i= index">
+          <td>{{ detail.id }}</td>
+          <td>{{ detail.name }}</td>
+          <td>{{ detail.roll }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
